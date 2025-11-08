@@ -2,6 +2,14 @@ provider "google" {
   project = var.project_id
   region  = var.region
 }
+resource "google_storage_bucket" "state" {
+  name          = var.state_bucket_name
+  location      = var.bucket_location
+  storage_class = "STANDARD"
+
+  versioning { enabled = true }
+  uniform_bucket_level_access = true
+}
 
 resource "google_project_service" "enable_services" {
   for_each = toset([
