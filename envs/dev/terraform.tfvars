@@ -1,0 +1,9 @@
+project_id        = "project-1
+region            = "us-central1"
+network_name      = "my-vpc"
+public_subnet_ip  = "10.0.1.0/24"
+private_subnet_ip = "10.0.2.0/24"
+cluster_name      = "my-gke-cluster"
+node_machine_type = "e2-medium"
+min_node_count    = 1
+max_node_count    = 3
